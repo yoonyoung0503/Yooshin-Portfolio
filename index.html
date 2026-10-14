@@ -128,6 +128,14 @@ section{padding-block:64px 0;scroll-margin-top:60px}
 .doc span{font-size:12.5px;color:var(--dim)}
 
 .exp-foot{padding:12px 24px;border-top:1px solid var(--rule);font-size:14px;color:var(--sub);background:var(--tint-2)}
+.proj{padding:12px 24px 0;background:var(--tint-2);font-size:13px;color:var(--sub)}
+.proj b{color:var(--navy);font-weight:700;margin-right:8px}
+.proj + .flow{padding-top:10px}
+.others{padding:16px 24px 18px;border-top:1px solid var(--rule);background:var(--tint-2)}
+.others .lab{margin-bottom:8px}
+.others ul{list-style:none;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.others li{background:var(--paper);border:1px solid var(--rule);border-radius:6px;padding:10px 12px;font-size:13.5px;color:var(--sub);line-height:1.55;min-width:0}
+.others li b{display:block;color:var(--navy);font-size:14px}
 .exp-foot b{color:var(--navy);font-weight:500;margin-right:8px}
 
 /* 4. additional / 5. tools */
@@ -157,6 +165,7 @@ footer{padding-block:56px 40px;color:var(--dim);font-size:13.5px}
   .flow{grid-template-columns:repeat(2,minmax(0,1fr))}
   .flow li::after{display:none}
   .pair{grid-template-columns:1fr}
+  .others ul{grid-template-columns:1fr}
   .tools{grid-template-columns:1fr}
 }
 @media (max-width:640px){
@@ -165,7 +174,7 @@ footer{padding-block:56px 40px;color:var(--dim);font-size:13.5px}
   .map{grid-template-columns:1fr}
   .n1,.n2,.n3,.n4{grid-column:1;grid-row:auto}
   .row{grid-template-columns:1fr;gap:4px}
-  .exp-head,.flow,.pair,.three > div,.exp-foot{padding-inline:16px}
+  .exp-head,.flow,.pair,.proj,.others,.three > div,.exp-foot{padding-inline:16px}
 }
 @media (max-width:400px){ .flow{grid-template-columns:1fr} }
 @media print{
@@ -205,7 +214,7 @@ footer{padding-block:56px 40px;color:var(--dim);font-size:13.5px}
       <div class="id-body">
         <div class="id-blk"><h4>EXPERIENCE</h4><ul>
           <li>한국주택금융공사 AI전략실 인턴<span class="num">2026.02–2026.08</span></li>
-          <li>코데이터솔루션 인턴<span class="num">2025.07–2025.08</span></li>
+          <li>코데이터솔루션 인턴<span class="num">2025.06–2025.11</span></li>
           <li>맥도날드 매장 매니저<span class="num">2021.02–2023.07</span></li>
         </ul></div>
         <div class="id-blk"><h4>EDUCATION</h4><ul>
@@ -250,8 +259,9 @@ footer{padding-block:56px 40px;color:var(--dim);font-size:13.5px}
       <article class="exp" id="exp1">
         <div class="exp-head">
           <h3><span class="h-no">경험 1</span>사업 신청서류 확인 및 심사자료 취합</h3>
-          <span class="meta">코데이터솔루션 인턴 · KOTRA 관세대응 바우처 사업 · <span class="num">2025.07–2025.08</span></span>
+          <span class="meta">코데이터솔루션 인턴 · <span class="num">2025.06–2025.11</span></span>
         </div>
+        <p class="proj"><b>KOTRA 관세대응 바우처 사업</b><span class="num">2025.07–2025.08</span> · 2개월간 담당한 업무 순서</p>
         <ol class="flow" aria-label="담당 업무 순서">
           <li><b>신청서 접수</b><span>신청기업별 접수</span></li>
           <li class="key"><b>구비서류 확인</b><span>신청기업별 제출서류 확인</span></li>
@@ -275,7 +285,13 @@ footer{padding-block:56px 40px;color:var(--dim);font-size:13.5px}
             <span class="note">막대는 16시간·2시간 기준으로 표시</span>
           </div>
         </div>
-        <p class="exp-foot"><b>추가 업무</b>남북경협 FGI 운영 — 안내문·공지 메일 작성 및 발송, 조사자료 Excel 정리와 결과표 작성</p>
+        <div class="others"><span class="lab">인턴 기간 중 다른 업무</span>
+          <ul>
+            <li><b>남북경협 FGI 운영</b>안내문·공지 메일 작성 및 발송</li>
+            <li><b>조사자료 정리</b>Excel로 조사 데이터를 정리·추출하고 결과표 작성</li>
+            <li><b>반복 업무 자동화</b>회의록 자동화와 주간 AI 기술동향 보고 자동화를 만들어 다음 인턴에게 인수인계</li>
+          </ul>
+        </div>
       </article>
 
       <article class="exp" id="exp2">
